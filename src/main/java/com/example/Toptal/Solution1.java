@@ -4,7 +4,8 @@ import java.util.*;
 import java.util.stream.IntStream;
 
 public class Solution1 {
-
+   //that, given an array A of N integers,
+   // returns the smallest positive integer (greater than 0) that does not occur in A.
     public static void main(String[] args) {
         Integer[] A = new Integer[]{1, 2, 3};
         Arrays.sort(A);
