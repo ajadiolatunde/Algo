@@ -3,6 +3,10 @@ package com.example.Toptal;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/***
+ * Get numbers of connected component in undirected graph
+ */
+
 public class Connected {
     private static int ans = 0;
     public static class edge{
@@ -79,7 +83,7 @@ public class Connected {
             }
         }
         //System.out.println(adjs.size());
-        //System.out.println(adjs.entrySet());
+        System.out.println(adjs.entrySet());
         return adjs.size();
     }
 
@@ -112,21 +116,10 @@ public class Connected {
       return adj;
     }
 
-    private static Map<Integer, List<Integer>>  buildAdjacencicy(List<edge> obj){
-        Map<Integer, List<Integer>> adj = obj.stream()
-                .collect(Collectors.groupingBy(x->x.city1,Collectors.mapping(x->x.city2, Collectors.toList())))
-               .entrySet().stream()
-              .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,(oldValue, newValue)-> oldValue,LinkedHashMap::new));
-        System.out.println(adj);
-        //After sort
-        Comparator<Map.Entry<Integer, List<Integer>>> sorted = Comparator.comparingInt(stringListEntry -> stringListEntry.getValue().get(0));
-        return adj;
-    }
+
     public static void main(String[] args){
-        List<edge> array = new ArrayList<>(Arrays.asList(new edge(8,5),new edge(1,2),new edge(2,3),new edge(2,4),new edge(3,5),new edge(6,7)));
-        List<edge> array1 = new ArrayList<>(Arrays.asList(new edge(0,1),new edge(1,2),new edge(3,4)));
-        Map<Integer, List<Integer>> adj =buildAdjacencicy(array1);
-       // getConnectedComponent(adj,0);
+        List<edge> array = new ArrayList<>(Arrays.asList(new edge(8,5),new edge(1,2),new edge(2,3),new edge(2,4),new edge(3,5),new edge(6,7)));// return 2
+        List<edge> array1 = new ArrayList<>(Arrays.asList(new edge(0,1),new edge(1,2),new edge(2,3),new edge(3,4)));//return 1
         Map<Integer, Set<Integer>> adjs = buildNodeAdjacencicy(array1);
         getSetConnectedComponent(adjs,0);
         System.out.println("--ans--"+ans);
