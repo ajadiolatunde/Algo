@@ -52,9 +52,7 @@ public class Connected {
                 }
             }
         }
-        //System.out.println(adjs.size());
-        //System.out.println(adjs.entrySet());
-
+        System.out.println(adjs.entrySet());
         ans=  adjs.size();
     }
 
