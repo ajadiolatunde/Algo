@@ -3,6 +3,16 @@ package com.example.dfs;
 import java.util.*;
 
 public class Island {
+    /**
+     *unction bitmapHoles that takes in strArr which is an array
+     * of strings that form a 2D matrix of 0 and 1's.
+     * The function should determine how many holes,
+     * or contiguous regions of 0's, exist in the matrix.
+     * A contiguous region is one where there is a connected group of 0's
+     * going in one or more of four directions: up, down, left, or right.
+     * @param array
+     * @return
+     */
     private static int getIsland(List<String> array){
         int column_leng = array.get(0).length();
         int row_leng = array.size();
@@ -85,9 +95,11 @@ public class Island {
         List<String> arrays5 = Arrays.asList("01111", "01001", "00001", "11110");//return is 4
         List<String> arrays2 = Arrays.asList("01111", "01101", "00000", "11110");//return is 2
         List<String> arrays1 = Arrays.asList("1100", "1100", "0010", "0001");//return is 2
+        List<String> arrays6 = Arrays.asList("01111", "01101", "00011", "11110");//return is 3
 
 
-        getIsland(arrays1);
+
+        getIsland(arrays6);
 
     }
 }
