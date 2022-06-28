@@ -11,7 +11,8 @@ public class Maptest {
         kl.put("food",6);
         kl.put("class",7);
         System.out.println(kl.entrySet());
-        Map<String,Integer> jk= kl.entrySet().stream().sorted( Map.Entry.comparingByValue()).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
+        Map<String,Integer> jk= kl.entrySet().stream().sorted( Map.Entry.comparingByValue())
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
                 (oldValue, newValue) -> oldValue, LinkedHashMap::new));
         System.out.println(kl.entrySet());
 

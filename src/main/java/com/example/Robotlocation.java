@@ -84,13 +84,13 @@ public class Robotlocation {
     }
 
     public static void main(String[] args) {
-        String[]  data1 = new String[]{"1001","0110"};
+        String[]  data1 = new String[]{"10110001","0110001"};
         String[]  data2 = new String[]{"10101","01110"};
         String[]  data3 = new String[]{"10110","11100"};
         String[]  data4 = new String[]{"10101","11100"};
         String[]  data5 = new String[]{"101011","11100"};
 
 
-        System.out.println( getValidity(data5));
+        System.out.println( getValidity(data1));
     }
 }

@@ -29,7 +29,7 @@ public class Test2 {
 
     public static void main(String[] args){
         List<Integer> list = Arrays.asList(2,19,3,7);
-        ans(list.stream().collect(Collectors.toList()));
+        ans(new ArrayList<>(list));
 
     }
 }
