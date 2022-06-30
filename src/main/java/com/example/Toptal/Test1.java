@@ -20,7 +20,7 @@ public class Test1 {
             double basevalue = Arrays.stream(Arrays.copyOfRange(at, j, at.length)).sum();
             double nd = s * (at[j]/basevalue);
             sh[j] = String.format("%.2f", nd);
-            System.out.println(sh[j]);
+            System.out.println(sh[j]+"-"+s+"--"+basevalue+"--"+at[j]);
             s -=  s * (at[j]/basevalue);
         }
         return sh;

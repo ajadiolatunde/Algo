@@ -9,7 +9,6 @@ public class Test2 {
         int week =  day * 7;
         int w,d,h,m,s,remain;
 
-
             if (value< minutes){
                 return value+"s";
             }else if(value<hour){
@@ -46,6 +45,6 @@ public class Test2 {
     }
 
     public static void main(String[] args){
-       System.out.println( solution(700000));
+       System.out.println( solution(100000));
     }
 }

@@ -16,23 +16,25 @@ public class Island {
     private static int getIsland(List<String> array){
         int column_leng = array.get(0).length();
         int row_leng = array.size();
+        //Registry
         List<String> visited = new ArrayList<String>();
         int count = 0;
+        //Distinct registry
         Map<String,Set<String>> map = new HashMap<>();
         for (int r=0;r<row_leng;r++){
 
             for (int c=0;c<column_leng;c++){
-                //System.out.print(array.get(r).charAt(c));
                 //check row
                 String location = String.valueOf(array.get(r).charAt(c));
+                //If location char is 1
                 if (location.equals("1")){
                     Set<String> loc = new HashSet<>();
-
+                    //Check registry to see that is not yoet visited
                     if (!visited.contains(r+""+c)){
                         loc.add(r+""+c);
                         //visited.add(r+""+c);
                         count++;
-                        //Check  column
+                        //Check all column till 0 is found and registered all visited
                             for (int sub_c=c+1;sub_c<column_leng;sub_c++){
                                 location = String.valueOf(array.get(r).charAt(c+1));
                                 if (location.equals("1") && !visited.contains(r+""+sub_c)){
@@ -42,7 +44,7 @@ public class Island {
                                     break;
                                 }
                             }
-                            //Check row
+                            //Check all row till 0 is found and registered all visited
                             for (int sub_r=r+1;sub_r<row_leng;sub_r++){
                                 location = String.valueOf(array.get(sub_r).charAt(c));
                                 if (location.equals("1") && !visited.contains(sub_r+""+c)){
@@ -78,6 +80,20 @@ public class Island {
                             }
 
                         }
+                        //Transverse column for 1
+
+                        for (int sub_c=c+1;sub_c<column_leng;sub_c++){
+                            location = String.valueOf(array.get(r).charAt(sub_c));
+                            //changing column
+                            if (location.equals("1") && !visited.contains(r+""+sub_c)){
+                                visited.add(r+""+sub_c);
+                                new_loc.add(r+""+sub_c);
+
+                            }else{
+                                break;
+                            }
+
+                        }
 
                         map.put(key,new_loc);
 
@@ -93,14 +109,12 @@ public class Island {
     }
 
     public static void main(String[] args){
-        List<String> arrays5 = Arrays.asList("01111", "01001", "00001", "11110");//return is 4
+        List<String> arrays5 = Arrays.asList("01111", "01001", "00001", "11110");//return is 2
         List<String> arrays2 = Arrays.asList("01111", "01101", "00000", "11110");//return is 2
-        List<String> arrays1 = Arrays.asList("1100", "1100", "0010", "0001");//return is 2
-        List<String> arrays6 = Arrays.asList("1110", "1111", "1001", "1001");//return is 3
+        List<String> arrays1 = Arrays.asList("1100", "1100", "0010", "0001");//return is 3
+        List<String> arrays6 = Arrays.asList("1110", "1111", "1001", "1001");//return is 1
 
-
-
-        getIsland(arrays6);
+        getIsland(arrays1);
 
     }
 }
