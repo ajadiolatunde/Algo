@@ -138,7 +138,7 @@ public class Connected {
         List<edge> array1 = new ArrayList<>(Arrays.asList(new edge(0,1),new edge(1,2),new edge(2,3),new edge(3,4)));//return 1
         List<edge> array2 = new ArrayList<>(Arrays.asList(new edge(1,2),new edge(2,4),new edge(5,7),new edge(7,2),new edge(9,5)));//return 1
 
-        Map<Integer, Set<Integer>> adjs = buildNodeAdjacencicy(array2);
+        Map<Integer, Set<Integer>> adjs = buildNodeAdjacencicy(array);
         //getSetConnectedComponent(adjs);
         getConnectedComponent(adjs);
 

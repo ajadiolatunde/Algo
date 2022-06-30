@@ -26,7 +26,7 @@ public class Cards {
         return loader[0];
     }
     public static void main(String[] args){
-        System.out.println(getSmallest(new int[]{1,2},new int[]{1,2}));
+        System.out.println(getSmallest(new int[]{1,2,3,4},new int[]{5,2,2,3}));
 
     }
 }
