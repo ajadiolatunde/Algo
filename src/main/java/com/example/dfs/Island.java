@@ -40,6 +40,7 @@ public class Island {
                                 if (location.equals("1") && !visited.contains(r+""+sub_c)){
                                     loc.add(r+""+sub_c);
                                     visited.add(r+""+sub_c);
+
                                 }else{
                                     break;
                                 }
@@ -75,6 +76,11 @@ public class Island {
                                 visited.add(sub_r+""+c);
                                 new_loc.add(sub_r+""+c);
 
+                            }else if(location.equals("1") ){
+                                //Todo: get key of marked if diffrent and merge
+                                System.out.println(key+" "+sub_r+"--"+c);
+                                new_loc.add(sub_r+""+c);
+
                             }else{
                                 break;
                             }
@@ -88,6 +94,20 @@ public class Island {
                             if (location.equals("1") && !visited.contains(r+""+sub_c)){
                                 visited.add(r+""+sub_c);
                                 new_loc.add(r+""+sub_c);
+
+                            }else if(location.equals("1")){
+                                //Get the key of current registry (Union relationship)
+                                int finalR1 = r;
+                                int finalSub_c = sub_c;
+                                String old_key = map.entrySet().stream()
+                                        .filter(entry -> entry.getValue().contains(finalR1 +""+ finalSub_c))
+                                        .findFirst().get().getKey();
+                                if (!old_key.equals(key)){
+                                    Set<String> old_loc = map.get(old_key);
+                                    new_loc.addAll(old_loc);
+                                    count--;
+                                    map.remove(old_key);
+                                }
 
                             }else{
                                 break;
@@ -110,7 +130,7 @@ public class Island {
 
     public static void main(String[] args){
         List<String> arrays5 = Arrays.asList("01111", "01001", "00001", "11110");//return is 2
-        List<String> arrays2 = Arrays.asList("01111", "01101", "00000", "11110");//return is 2
+        List<String> arrays2 = Arrays.asList("10111", "10101", "11101", "11111");//return is 1
         List<String> arrays1 = Arrays.asList("1100", "1100", "0010", "0001");//return is 3
         List<String> arrays6 = Arrays.asList("1110", "1111", "1001", "1001");//return is 1
 
