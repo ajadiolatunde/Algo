@@ -1,6 +1,7 @@
 package com.example.euler;
 
 import java.util.Arrays;
+import java.util.Optional;
 import java.util.function.IntPredicate;
 import java.util.function.Predicate;
 import java.util.stream.IntStream;
