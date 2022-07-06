@@ -50,6 +50,53 @@ public class Bribes {
         int total_swap = 0;
         boolean quaotic = false;
         int[] q = l.stream().mapToInt(Integer::valueOf).toArray();
+        for (int x=q.length;x>=1;x--) {
+            if (quaotic)break;
+            int item_swap = 0;
+            for (int y=x-1;y>=0;y--) {
+                if (x==q[y]){
+                   break;
+                }
+               if(x==q[y-1]) {
+                    item_swap+= 1;
+                    q[y-1] = q[y];
+                    q[y] =x;
+                    break;
+                } else if (x == q[y-2]) {
+                   item_swap+= 2;
+                   q[y-2] = q[y-1];
+                   q[y-1] = q[y];
+                   q[y] =x;
+                   break;
+               } else{
+                    quaotic = true;
+                    break;
+                }
+            }
+
+            total_swap+= item_swap;
+        }
+        if (quaotic){
+            System.out.println("Too chaotic");
+        }else{
+            System.out.println(total_swap);
+        }
+
+    }
+
+
+    public static void main(String[] args){
+        List<Integer> kf = List.of(1 ,2 ,5, 3, 7, 8, 6 ,4);
+        List<Integer> f = List.of(2 ,1 ,5, 3,4);
+        minimumBribes(f);
+    }
+}
+//Slower version of minimumBribes
+class b{
+    public static void minimumBribes(List<Integer> l) {
+        int total_swap = 0;
+        boolean quaotic = false;
+        int[] q = l.stream().mapToInt(Integer::valueOf).toArray();
         for (int x=0;x<q.length;x++) {
             if (quaotic)break;
             int item_swap = 0;
@@ -72,16 +119,5 @@ public class Bribes {
         }
 
     }
-
-
-    public static void main(String[] args){
-        List<Integer> kf = List.of(1 ,2 ,5, 3, 7, 8, 6 ,4);
-        List<Integer> f = List.of(5 ,1 ,2, 3,4);
-        minimumBribes(kf);
-    }
-}
-
-class b{
-
 
 }
