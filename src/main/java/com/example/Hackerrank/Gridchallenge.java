@@ -59,7 +59,6 @@ public class Gridchallenge {
             return new String(c);
         } ).collect(Collectors.toList());
 
-
         for (int c = 0; c < kj.get(0).length;c++){
             List<Character> nm = new ArrayList<>();
             for (char[] chars : kj) {
