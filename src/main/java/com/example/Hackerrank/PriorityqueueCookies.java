@@ -39,11 +39,10 @@ public class PriorityqueueCookies {
     }
     public static void main(String[] args){
         List<Integer> list = List.of(2,7,3,6,4,6).stream().collect(Collectors.toList());
-        List<Integer> list2 = List.of(1,2,3,9,10,12).stream().collect(Collectors.toList());
+        List<Integer> list2 = Arrays.asList(1,2,3,9,10,12);
 
-        System.out.println(list);
-        cookies(9,list);
-
+        System.out.println(list2);
+        cookies(7,list2);
     }
 }
 
