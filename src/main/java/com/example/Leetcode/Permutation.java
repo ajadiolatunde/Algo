@@ -34,7 +34,7 @@ public class Permutation {
 
 
     public static void main(String[] args){
-        int[] p = {1,2,3};
+        int[] p = {1,-2,3};
 
        System.out.println( permutes(p));
     }
@@ -72,7 +72,7 @@ public class Permutation {
                         Set<Integer> values = new HashSet<>();
                         values.addAll(v);
                         values.remove(j);
-                        newMap.put(k+j, values);
+                        newMap.put(k+" "+j, values);
                     }
                 }
                 map = newMap;
@@ -82,10 +82,10 @@ public class Permutation {
         }
         List<List<Integer>> result = map.entrySet().stream()
                 .map(x->{
-                    String nv = x.getKey()+x.getValue().iterator().next();
-                    String[] jh = nv.split("");
-                    List<Integer>  nl = List.of(jh).stream().map(Integer::parseInt).collect(Collectors.toList());
-                    return nl;
+                    List<Integer> keylist = Arrays.stream( x.getKey().split(" ")).map(Integer::valueOf).collect(Collectors.toList());
+                    int valuelist = x.getValue().iterator().next();
+                    keylist.add(valuelist);
+                    return keylist;
                 }).collect(Collectors.toList());
         System.out.println(map.entrySet().size());
 
