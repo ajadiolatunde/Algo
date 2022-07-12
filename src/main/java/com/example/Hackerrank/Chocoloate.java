@@ -1,8 +1,9 @@
 package com.example.Hackerrank;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.function.Consumer;
 
 public class Chocoloate {
     /**
@@ -62,5 +63,11 @@ public class Chocoloate {
         int d = 18;
         int m = 7;
         birthday(list,d,m);
+        String l= "1-1-23";
+        String[] kl = l.split("(-\\d)");
+        Consumer<String> con = System.out::println;
+        Arrays.stream(kl).forEach(con);
+        System.out.println("-----");
+
     }
 }
