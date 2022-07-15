@@ -4,9 +4,7 @@ import java.util.*;
 
 public class Boards {
     private static boolean exist(char[][] board,String words){
-        String word = words.substring(0,words.length());
-
-
+        String word = words;
         int row_len = board.length;
         int col_len = board[0].length;
         Stack<Map<String,String>> tJunctions = new Stack<>();
@@ -49,25 +47,24 @@ public class Boards {
                         }
                         if (count_tjunctions>1){
                             word =word.replaceFirst(String.valueOf(current),"");
-                            //word = str.substring(1, str.length() - 1);
                              if (up){
                                  Map<String,String> mup = new HashMap<>();
-                                 mup.put(word,(row-1)+""+col);
+                                 mup.put(word,(row-1)+" "+col);
                                  tJunctions.add(mup);
                              }
                             if (down){
                                 Map<String,String> mdown = new HashMap<>();
-                                mdown.put(word,row+1+""+col);
+                                mdown.put(word,(row+1)+" "+col);
                                 tJunctions.add(mdown);
                             }
                             if (forward){
                                 Map<String,String> mforward = new HashMap<>();
-                                mforward.put(word,row+""+col);
+                                mforward.put(word,row+" "+col);
                                 tJunctions.add(mforward);
                             }
                             if (back){
                                 Map<String,String> mback = new HashMap<>();
-                                mback.put(word,row+""+(col-2));
+                                mback.put(word,row+" "+(col-2));
                                 tJunctions.add(mback);
                             }
                             //Add current
@@ -75,7 +72,9 @@ public class Boards {
                             //Remove found char from word
                             //Get next position fron stack;
                             Map<String,String> mnext = tJunctions.pop();
-                            String[] rc = mnext.values().iterator().next().split("");
+                            String[] rc = mnext.values().iterator().next().split(" ");
+                            System.out.println("----here--------");
+                            System.out.println(Arrays.toString(rc));
                             row = Integer.parseInt(rc[0]);
                             col= Integer.parseInt(rc[1]);
                             //No tjunctions
@@ -125,7 +124,12 @@ public class Boards {
     public static void main(String[] args){
         char[][] ev  = {{'a','b'},{'c','d'}};
         String v = "abd";
-        char c = 'a';
-       System.out.println(exist(ev,v));
+        char[][] ba = {{'b','b','b','a','b','b'},{'b','a','b','b','a','a'},{'b','a','b','a','a','a'},{'a','a','a','a','b','a'},{'a','a','b','b','b','a'},{'a','a','b','b','a','a'}};
+        String b = "abbbbaabbbbb";
+        char[][] ec =  {{'A','B','C','E'},{'S','F','S','S'},{'A','D','E','E'}};
+        String e = "ABFSADE";
+        System.out.println(exist(ec,e));
+        String test = "1-1";
+
     }
 }
