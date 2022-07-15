@@ -4,16 +4,27 @@ import java.util.*;
 
 public class Boards {
     private static boolean exist(char[][] board,String words){
+
+        /**
+         * Given an m x n grid of characters board and a string word, return true if word exists in the grid.
+         *
+         * The word can be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once.
+         * @param board
+         * @param word
+         * @return
+         */
         String word = words;
         int row_len = board.length;
         int col_len = board[0].length;
         Stack<Map<String,String>> tJunctions = new Stack<>();
         List<String>   word_coordList = new ArrayList<>();
+        String next_position="00";
 
         for (int row=0;row<board.length;row++ ){
             for (int col=0;col<board[0].length;col++ ){
                 //Try right
                 System.out.println(word);
+                System.out.println(word_coordList);
                 if (word.length()<=1){
                     word_coordList.add(row+""+col);
                     word = "";
@@ -41,20 +52,22 @@ public class Boards {
                             count_tjunctions++;
                         }
                         //backward
-                        if (col>0 && !word_coordList.contains(row+""+(col+1)) && word.charAt(1) == board[row][col-1] ){
+                        if (col>0 && !word_coordList.contains(row+""+(col-1)) && word.charAt(1) == board[row][col-1] ){
                             back = true;
                             count_tjunctions++;
                         }
                         if (count_tjunctions>1){
+                            System.out.println(row+" "+col+"----more tj--------"+count_tjunctions);
+
                             word =word.replaceFirst(String.valueOf(current),"");
                              if (up){
                                  Map<String,String> mup = new HashMap<>();
-                                 mup.put(word,(row-1)+" "+col);
+                                 mup.put(word,(row-1)+" "+(col-1));
                                  tJunctions.add(mup);
                              }
                             if (down){
                                 Map<String,String> mdown = new HashMap<>();
-                                mdown.put(word,(row+1)+" "+col);
+                                mdown.put(word,(row+1)+" "+(col-1));
                                 tJunctions.add(mdown);
                             }
                             if (forward){
@@ -67,16 +80,18 @@ public class Boards {
                                 mback.put(word,row+" "+(col-2));
                                 tJunctions.add(mback);
                             }
+
                             //Add current
                             word_coordList.add(row+""+col);
                             //Remove found char from word
                             //Get next position fron stack;
                             Map<String,String> mnext = tJunctions.pop();
                             String[] rc = mnext.values().iterator().next().split(" ");
-                            System.out.println("----here--------");
-                            System.out.println(Arrays.toString(rc));
+                            //System.out.println(Arrays.toString(rc));
+                            System.out.print("more tj-at  "+row+" "+col+"-----------"+count_tjunctions+"   selected  ");
                             row = Integer.parseInt(rc[0]);
                             col= Integer.parseInt(rc[1]);
+                            System.out.println(row+""+(col+1));
                             //No tjunctions
                         }else if (count_tjunctions == 1){
                             //Add current and move to next coord position
@@ -87,6 +102,7 @@ public class Boards {
 
                             if (up){
                                 row -= 1;
+                                col -= 1;
                             }else if (down){
                                 row +=1;
                                 col -= 1;
@@ -102,16 +118,27 @@ public class Boards {
                             if (tJunctions.size()>0) {
                                 Map<String, String> mnext = tJunctions.pop();
                                 String coord = mnext.values().iterator().next();
-                                String[] rc = coord.split("");
+                                String[] rc = coord.split(" ");
                                 row = Integer.parseInt(rc[0]);
                                 col = Integer.parseInt(rc[1]);
                                 //Restore  word to point of this tjunction
                                 word = mnext.keySet().iterator().next();
-                                word_coordList = word_coordList.subList(0,word_coordList.indexOf(coord)+1);
+                                System.out.println(word_coordList+"----before");
+                                word_coordList = word_coordList.subList(0,words.length()-word.length());
+                                System.out.println(word_coordList+"--executed next--tj--------"+word+"----"+row+""+(col+1));
+
                             }else{
                                 // Else move to defaut loop and start all over
+                                if (word_coordList.size()>0){
+                                    String[] next_rc = word_coordList.get(0).split("");
+                                    row = Integer.parseInt(next_rc[0]);
+                                    col = Integer.parseInt(next_rc[1]);;
+                                }
                                 word_coordList.clear();
                                 word = words;
+
+
+                                System.out.println("Nothing next ---------------"+row+""+col);
                             }
                         }
                     }
@@ -128,8 +155,10 @@ public class Boards {
         String b = "abbbbaabbbbb";
         char[][] ec =  {{'A','B','C','E'},{'S','F','S','S'},{'A','D','E','E'}};
         String e = "ABFSADE";
-        System.out.println(exist(ec,e));
-        String test = "1-1";
+        System.out.println(exist(ba,b));
+//        String test = "1-1";
+//        String[] result = test.split("-?");
+//        System.out.println(Arrays.toString(result));
 
     }
 }

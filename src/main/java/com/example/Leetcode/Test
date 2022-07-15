@@ -1,0 +1,389 @@
+baabbbbb
+[03]
+bbbaabbbbb
+[03, 04]
+bbaabbbbb
+[03, 04, 05]
+[03, 04, 05]----before
+[03]--executed next--tj--------bbbbaabbbbb----13
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 13]
+1 2----more tj--------2
+more tj-at  1 2-----------2   selected  22
+bbaabbbbb
+[03, 13, 12]
+[03, 13, 12]----before
+[03, 13, 12]--executed next--tj--------bbaabbbbb----02
+bbaabbbbb
+[03, 13, 12]
+Nothing next ---------------02
+abbbbaabbbbb
+[]
+0 3----more tj--------3
+more tj-at  0 3-----------3   selected  02
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 02]
+1 2----more tj--------2
+more tj-at  1 2-----------2   selected  13
+bbaabbbbb
+[03, 02, 12]
+baabbbbb
+[03, 02, 12, 13]
+[03, 02, 12, 13]----before
+[03, 02, 12]--executed next--tj--------bbaabbbbb----22
+bbaabbbbb
+[03, 02, 12]
+[03, 02, 12]----before
+[03]--executed next--tj--------bbbbaabbbbb----04
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 04]
+bbaabbbbb
+[03, 04, 05]
+[03, 04, 05]----before
+[03]--executed next--tj--------bbbbaabbbbb----13
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 13]
+1 2----more tj--------2
+more tj-at  1 2-----------2   selected  22
+bbaabbbbb
+[03, 13, 12]
+[03, 13, 12]----before
+[03, 13, 12]--executed next--tj--------bbaabbbbb----02
+bbaabbbbb
+[03, 13, 12]
+Nothing next ---------------02
+abbbbaabbbbb
+[]
+0 3----more tj--------3
+more tj-at  0 3-----------3   selected  02
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 02]
+1 2----more tj--------2
+more tj-at  1 2-----------2   selected  13
+bbaabbbbb
+[03, 02, 12]
+baabbbbb
+[03, 02, 12, 13]
+[03, 02, 12, 13]----before
+[03, 02, 12]--executed next--tj--------bbaabbbbb----22
+bbaabbbbb
+[03, 02, 12]
+[03, 02, 12]----before
+[03]--executed next--tj--------bbbbaabbbbb----04
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 04]
+bbaabbbbb
+[03, 04, 05]
+[03, 04, 05]----before
+[03]--executed next--tj--------bbbbaabbbbb----13
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 13]
+1 2----more tj--------2
+more tj-at  1 2-----------2   selected  22
+bbaabbbbb
+[03, 13, 12]
+[03, 13, 12]----before
+[03, 13, 12]--executed next--tj--------bbaabbbbb----02
+bbaabbbbb
+[03, 13, 12]
+Nothing next ---------------02
+abbbbaabbbbb
+[]
+0 3----more tj--------3
+more tj-at  0 3-----------3   selected  02
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 02]
+1 2----more tj--------2
+more tj-at  1 2-----------2   selected  13
+bbaabbbbb
+[03, 02, 12]
+baabbbbb
+[03, 02, 12, 13]
+[03, 02, 12, 13]----before
+[03, 02, 12]--executed next--tj--------bbaabbbbb----22
+bbaabbbbb
+[03, 02, 12]
+[03, 02, 12]----before
+[03]--executed next--tj--------bbbbaabbbbb----04
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 04]
+bbaabbbbb
+[03, 04, 05]
+[03, 04, 05]----before
+[03]--executed next--tj--------bbbbaabbbbb----13
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 13]
+1 2----more tj--------2
+more tj-at  1 2-----------2   selected  22
+bbaabbbbb
+[03, 13, 12]
+[03, 13, 12]----before
+[03, 13, 12]--executed next--tj--------bbaabbbbb----02
+bbaabbbbb
+[03, 13, 12]
+Nothing next ---------------02
+abbbbaabbbbb
+[]
+0 3----more tj--------3
+more tj-at  0 3-----------3   selected  02
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 02]
+1 2----more tj--------2
+more tj-at  1 2-----------2   selected  13
+bbaabbbbb
+[03, 02, 12]
+baabbbbb
+[03, 02, 12, 13]
+[03, 02, 12, 13]----before
+[03, 02, 12]--executed next--tj--------bbaabbbbb----22
+bbaabbbbb
+[03, 02, 12]
+[03, 02, 12]----before
+[03]--executed next--tj--------bbbbaabbbbb----04
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 04]
+bbaabbbbb
+[03, 04, 05]
+[03, 04, 05]----before
+[03]--executed next--tj--------bbbbaabbbbb----13
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 13]
+1 2----more tj--------2
+more tj-at  1 2-----------2   selected  22
+bbaabbbbb
+[03, 13, 12]
+[03, 13, 12]----before
+[03, 13, 12]--executed next--tj--------bbaabbbbb----02
+bbaabbbbb
+[03, 13, 12]
+Nothing next ---------------02
+abbbbaabbbbb
+[]
+0 3----more tj--------3
+more tj-at  0 3-----------3   selected  02
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 02]
+1 2----more tj--------2
+more tj-at  1 2-----------2   selected  13
+bbaabbbbb
+[03, 02, 12]
+baabbbbb
+[03, 02, 12, 13]
+[03, 02, 12, 13]----before
+[03, 02, 12]--executed next--tj--------bbaabbbbb----22
+bbaabbbbb
+[03, 02, 12]
+[03, 02, 12]----before
+[03]--executed next--tj--------bbbbaabbbbb----04
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 04]
+bbaabbbbb
+[03, 04, 05]
+[03, 04, 05]----before
+[03]--executed next--tj--------bbbbaabbbbb----13
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 13]
+1 2----more tj--------2
+more tj-at  1 2-----------2   selected  22
+bbaabbbbb
+[03, 13, 12]
+[03, 13, 12]----before
+[03, 13, 12]--executed next--tj--------bbaabbbbb----02
+bbaabbbbb
+[03, 13, 12]
+Nothing next ---------------02
+abbbbaabbbbb
+[]
+0 3----more tj--------3
+more tj-at  0 3-----------3   selected  02
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 02]
+1 2----more tj--------2
+more tj-at  1 2-----------2   selected  13
+bbaabbbbb
+[03, 02, 12]
+baabbbbb
+[03, 02, 12, 13]
+[03, 02, 12, 13]----before
+[03, 02, 12]--executed next--tj--------bbaabbbbb----22
+bbaabbbbb
+[03, 02, 12]
+[03, 02, 12]----before
+[03]--executed next--tj--------bbbbaabbbbb----04
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 04]
+bbaabbbbb
+[03, 04, 05]
+[03, 04, 05]----before
+[03]--executed next--tj--------bbbbaabbbbb----13
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 13]
+1 2----more tj--------2
+more tj-at  1 2-----------2   selected  22
+bbaabbbbb
+[03, 13, 12]
+[03, 13, 12]----before
+[03, 13, 12]--executed next--tj--------bbaabbbbb----02
+bbaabbbbb
+[03, 13, 12]
+Nothing next ---------------02
+abbbbaabbbbb
+[]
+0 3----more tj--------3
+more tj-at  0 3-----------3   selected  02
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 02]
+1 2----more tj--------2
+more tj-at  1 2-----------2   selected  13
+bbaabbbbb
+[03, 02, 12]
+baabbbbb
+[03, 02, 12, 13]
+[03, 02, 12, 13]----before
+[03, 02, 12]--executed next--tj--------bbaabbbbb----22
+bbaabbbbb
+[03, 02, 12]
+[03, 02, 12]----before
+[03]--executed next--tj--------bbbbaabbbbb----04
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 04]
+bbaabbbbb
+[03, 04, 05]
+[03, 04, 05]----before
+[03]--executed next--tj--------bbbbaabbbbb----13
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 13]
+1 2----more tj--------2
+more tj-at  1 2-----------2   selected  22
+bbaabbbbb
+[03, 13, 12]
+[03, 13, 12]----before
+[03, 13, 12]--executed next--tj--------bbaabbbbb----02
+bbaabbbbb
+[03, 13, 12]
+Nothing next ---------------02
+abbbbaabbbbb
+[]
+0 3----more tj--------3
+more tj-at  0 3-----------3   selected  02
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 02]
+1 2----more tj--------2
+more tj-at  1 2-----------2   selected  13
+bbaabbbbb
+[03, 02, 12]
+baabbbbb
+[03, 02, 12, 13]
+[03, 02, 12, 13]----before
+[03, 02, 12]--executed next--tj--------bbaabbbbb----22
+bbaabbbbb
+[03, 02, 12]
+[03, 02, 12]----before
+[03]--executed next--tj--------bbbbaabbbbb----04
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 04]
+bbaabbbbb
+[03, 04, 05]
+[03, 04, 05]----before
+[03]--executed next--tj--------bbbbaabbbbb----13
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 13]
+1 2----more tj--------2
+more tj-at  1 2-----------2   selected  22
+bbaabbbbb
+[03, 13, 12]
+[03, 13, 12]----before
+[03, 13, 12]--executed next--tj--------bbaabbbbb----02
+bbaabbbbb
+[03, 13, 12]
+Nothing next ---------------02
+abbbbaabbbbb
+[]
+0 3----more tj--------3
+more tj-at  0 3-----------3   selected  02
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 02]
+1 2----more tj--------2
+more tj-at  1 2-----------2   selected  13
+bbaabbbbb
+[03, 02, 12]
+baabbbbb
+[03, 02, 12, 13]
+[03, 02, 12, 13]----before
+[03, 02, 12]--executed next--tj--------bbaabbbbb----22
+bbaabbbbb
+[03, 02, 12]
+[03, 02, 12]----before
+[03]--executed next--tj--------bbbbaabbbbb----04
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 04]
+bbaabbbbb
+[03, 04, 05]
+[03, 04, 05]----before
+[03]--executed next--tj--------bbbbaabbbbb----13
+bbbbaabbbbb
+[03]
+bbbaabbbbb
+[03, 13]
+1 2----more tj--------2
+more tj-at  1 2-----------2   selected  22
+bbaabbbbb
+[03, 13, 12]
+[03, 13, 12]----before
+[03, 13, 12]--executed next--tj--------bbaabbbbb----02
+bbaabbbbb
+[03, 13, 12]
